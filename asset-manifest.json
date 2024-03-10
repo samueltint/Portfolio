@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Portfolio-SamuelTint/static/css/main.f855e6bc.css",
+    "main.js": "/Portfolio-SamuelTint/static/js/main.076defd7.js",
+    "static/js/453.1407b060.chunk.js": "/Portfolio-SamuelTint/static/js/453.1407b060.chunk.js",
+    "static/media/logo.svg": "/Portfolio-SamuelTint/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Portfolio-SamuelTint/index.html",
+    "main.f855e6bc.css.map": "/Portfolio-SamuelTint/static/css/main.f855e6bc.css.map",
+    "main.076defd7.js.map": "/Portfolio-SamuelTint/static/js/main.076defd7.js.map",
+    "453.1407b060.chunk.js.map": "/Portfolio-SamuelTint/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.076defd7.js"
+  ]
+}
