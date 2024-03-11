@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "https://whyguy44.github.io/Portfolio-SamuelTint/",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.18",
