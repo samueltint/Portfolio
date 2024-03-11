@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.e206c431.css",
-    "main.js": "/static/js/main.0dcd8ed0.js",
-    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
-    "static/media/profile.jpg": "/static/media/profile.cdefa5efa263dd2acbb8.jpg",
-    "index.html": "/index.html",
-    "main.e206c431.css.map": "/static/css/main.e206c431.css.map",
-    "main.0dcd8ed0.js.map": "/static/js/main.0dcd8ed0.js.map",
-    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+    "main.css": "/Portfolio-SamuelTint/static/css/main.e206c431.css",
+    "main.js": "/Portfolio-SamuelTint/static/js/main.183bd570.js",
+    "static/js/453.1407b060.chunk.js": "/Portfolio-SamuelTint/static/js/453.1407b060.chunk.js",
+    "static/media/profile.jpg": "/Portfolio-SamuelTint/static/media/profile.cdefa5efa263dd2acbb8.jpg",
+    "index.html": "/Portfolio-SamuelTint/index.html",
+    "main.e206c431.css.map": "/Portfolio-SamuelTint/static/css/main.e206c431.css.map",
+    "main.183bd570.js.map": "/Portfolio-SamuelTint/static/js/main.183bd570.js.map",
+    "453.1407b060.chunk.js.map": "/Portfolio-SamuelTint/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e206c431.css",
-    "static/js/main.0dcd8ed0.js"
+    "static/js/main.183bd570.js"
   ]
 }
