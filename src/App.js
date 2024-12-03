@@ -4,23 +4,44 @@ import TabPanel from "./TabPanel";
 import TabButton from "./TabButton";
 import Entry from "./Entry";
 import "./App.css";
-
+import { GithubIcon, LinkedInIcon } from "./assets/Icons.js";
+import Icon from "./Icon.js";
+import {
+  educationEntries,
+  experienceEntries,
+  projectEntries,
+} from "./Entries.js";
 function App() {
   return (
-    <div className="bg-slate-100 h-screen p-10">
+    <div className="bg-slate-200 h-screen p-10">
       <div className="w-full flex flex-col">
-        <div className="mx-auto bg-white items-center flex w-fit bg-white rounded-2xl shadow-xl m-5">
-          <img
-            src={profile}
-            className="h-48 shadow-lg my-[-200px] ml-[-40px] rounded-full overflow-hidden "
-            alt="Profile Picture"
-          />
-          <div className="flex flex-col p-5 gap-2">
-            <div className="font-redhat font-light text-6xl">Samuel Tint</div>
-            <hr className="border-black"></hr>
-            <div className="px-1 font-redhat text-xl">
-              Sydney based Software Engineer
+        <div className="flex w-full justify-between px-12">
+          <div className="bg-white items-center flex w-fit rounded-2xl shadow-xl m-5">
+            <img
+              src={profile}
+              className="h-48 shadow-lg my-[-200px] ml-[-40px] rounded-full overflow-hidden "
+              alt="Profile"
+            />
+            <div className="flex flex-col items-center p-5 gap-2">
+              <div className="px-3 font-redhat font-light text-6xl">
+                Samuel Tint
+              </div>
+              <hr className="w-full border-black"></hr>
+              <div className="font-redhat text-xl">
+                Sydney based Software Engineer
+              </div>
             </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Icon className="w-10" link="https://github.com/samueltint">
+              <GithubIcon />
+            </Icon>
+            <Icon
+              className="w-10"
+              link="https://www.linkedin.com/in/samuel-tint/"
+            >
+              <LinkedInIcon />
+            </Icon>
           </div>
         </div>
         <div className="p-5 pt-10">
@@ -31,30 +52,42 @@ function App() {
               <TabButton>Education</TabButton>
             </Tab.List>
             <Tab.Panels className="pt-2">
-              <Tab.Panel>
-                <TabPanel>
-                  <Entry company="Chaos 1 - " position="Software Engineer Intern">
-                    Worked on the prototype for a web-based problem solving
-                    platform.
+              <TabPanel>
+                {experienceEntries.map((entry) => (
+                  <Entry
+                    title={entry.title}
+                    subtitle={entry.subtitle}
+                    tags={entry.tags}
+                    details={entry.details}
+                  >
+                    {entry.description}
                   </Entry>
-                  <Entry company="Chaos 1 - " position="Software Engineer Intern">
-                    Worked on the prototype for a web-based problem solving
-                    platform.
+                ))}
+              </TabPanel>
+              <TabPanel>
+                {projectEntries.map((entry) => (
+                  <Entry
+                    title={entry.title}
+                    subtitle={entry.subtitle}
+                    tags={entry.tags}
+                    details={entry.details}
+                  >
+                    {entry.description}
                   </Entry>
-                </TabPanel>
-              </Tab.Panel>
-              <Tab.Panel>
-                <TabPanel>
-                  <Entry company="RBT/RDT Digital Entry - " position="NSW Police">
-                    Developed a React Native application to record 
+                ))}
+              </TabPanel>
+              <TabPanel>
+                {educationEntries.map((entry) => (
+                  <Entry
+                    title={entry.title}
+                    subtitle={entry.subtitle}
+                    tags={entry.tags}
+                    details={entry.details}
+                  >
+                    {entry.description}
                   </Entry>
-                </TabPanel>
-              </Tab.Panel>
-              <Tab.Panel>
-                <TabPanel>
-                  <Entry company="Bachelors of Engineering (Software)" position="Universit"/>
-                </TabPanel>
-              </Tab.Panel>
+                ))}
+              </TabPanel>
             </Tab.Panels>
           </Tab.Group>
         </div>
