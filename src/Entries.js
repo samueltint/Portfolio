@@ -38,7 +38,7 @@ const projectEntries = [
 const educationEntries = [
   {
     title: "Bachelors of Engineering (Software)",
-    subtitle: "University of Technology Sydney",
+    subtitle: "UTS",
   }
 ];
 export { experienceEntries, projectEntries, educationEntries };

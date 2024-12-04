@@ -14,7 +14,7 @@ import {
 
 function App() {
   return (
-    <div className="bg-slate-200 min-h-screen p-6 sm:p-10 w-full flex flex-col">
+    <div className="bg-slate-200 min-h-screen p-4 sm:p-10 w-full flex flex-col">
       <div className="flex flex-col md:flex-row w-full justify-between md:px-12">
         <div className="flex flex-row justify-end md:justify-start md:flex-col gap-4 md:order-2">
           <Icon className="w-10" link="https://github.com/samueltint">
