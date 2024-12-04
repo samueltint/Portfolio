@@ -4,19 +4,45 @@ import TabPanel from "./TabPanel";
 import TabButton from "./TabButton";
 import Entry from "./Entry";
 import "./App.css";
-import { GithubIcon, LinkedInIcon } from "./assets/Icons.js";
+import { EmailIcon, GithubIcon, LinkedInIcon } from "./assets/Icons.js";
 import Icon from "./Icon.js";
 import {
   educationEntries,
   experienceEntries,
   projectEntries,
 } from "./Entries.js";
+import { useState } from "react";
 
 function App() {
+  const [emailMessageVisible, setEmailMessageVisible] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText("samueltint2@gmail.com");
+    setEmailMessageVisible(true);
+    setTimeout(() => {
+      setEmailMessageVisible(false);
+    }, 1000);
+  };
   return (
-    <div className="bg-slate-200 min-h-screen p-4 sm:p-10 w-full flex flex-col">
+    <div className="relative bg-slate-200 min-h-screen p-4 sm:p-10 w-full flex flex-col">
       <div className="flex flex-col md:flex-row w-full justify-between md:px-12">
         <div className="flex flex-row justify-end md:justify-start md:flex-col gap-4 md:order-2">
+          <div
+            className={
+              "absolute top-5 right-5 text-md px-4 py-2 bg-white rounded-md shadow-sm transition-all " +
+              (emailMessageVisible ? "opacity-100" : "opacity-0")
+            }
+          >
+            Email Copied
+          </div>
+          <div
+            className="w-10 stroke-slate-600 hover:stroke-slate-500"
+            onClick={() => {
+              copyEmail();
+            }}
+          >
+            <EmailIcon />
+          </div>
           <Icon className="w-10" link="https://github.com/samueltint">
             <GithubIcon />
           </Icon>
@@ -53,28 +79,33 @@ function App() {
           </Tab.List>
           <Tab.Panels className="pt-2">
             <TabPanel>
-              {experienceEntries.map((entry) => (
-                <Entry
-                  title={entry.title}
-                  subtitle={entry.subtitle}
-                  tags={entry.tags}
-                  details={entry.details}
-                >
-                  {entry.description}
-                </Entry>
-              ))}
+              {experienceEntries.map(
+                ({ title, subtitle, tags, details, description }) => (
+                  <Entry
+                    title={title}
+                    subtitle={subtitle}
+                    tags={tags}
+                    details={details}
+                  >
+                    {description}
+                  </Entry>
+                )
+              )}
             </TabPanel>
             <TabPanel>
-              {projectEntries.map((entry) => (
-                <Entry
-                  title={entry.title}
-                  subtitle={entry.subtitle}
-                  tags={entry.tags}
-                  details={entry.details}
-                >
-                  {entry.description}
-                </Entry>
-              ))}
+              {projectEntries.map(
+                ({ title, subtitle, tags, details, link, description }) => (
+                  <Entry
+                    title={title}
+                    subtitle={subtitle}
+                    tags={tags}
+                    details={details}
+                    link={link}
+                  >
+                    {description}
+                  </Entry>
+                )
+              )}
             </TabPanel>
             <TabPanel>
               {educationEntries.map((entry) => (

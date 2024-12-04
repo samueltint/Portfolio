@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Entry({ title, subtitle, tags, children }) {
+function EntryCard({ title, subtitle, tags, clickable, children }) {
   return (
-    <div className="bg-white p-4 shadow-md rounded-2xl">
+    <div className={"bg-white p-4 shadow-md rounded-2xl transition-all" + (clickable && " hover:bg-gray-50 hover:mx-[-2px]")}>
       <div className="flex flex-col sm:flex-row items-start sm:items-center p-1 ">
         <div className="font-redhat text-xl sm:text-2xl leading-8 text-slate-700">
           {title}
@@ -12,9 +12,6 @@ export default function Entry({ title, subtitle, tags, children }) {
             </span>
           )}
         </div>
-        {/* <div className="pl-2 italic text-lg text-right text-slate-500 font-light inline">
-          {details}
-        </div> */}
         <div className="hidden sm:flex pl-4 flex-1 flex-wrap gap-2 ">
           {tags && (
             <>
@@ -34,5 +31,25 @@ export default function Entry({ title, subtitle, tags, children }) {
         {children}
       </div>
     </div>
+  );
+}
+
+export default function Entry({ title, subtitle, tags, children, link }) {
+  return (
+    <>
+      {link ? (
+        <a href={link} target="_blank" rel="noreferrer">
+          <EntryCard title={title} subtitle={subtitle} tags={tags} clickable> 
+            {children}
+          </EntryCard>
+        </a>
+      ) : (
+        <div>
+          <EntryCard title={title} subtitle={subtitle} tags={tags}>
+            {children}
+          </EntryCard>
+        </div>
+      )}
+    </>
   );
 }
