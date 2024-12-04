@@ -10,16 +10,21 @@ export default function Entry({ title, subtitle, details, tags, children }) {
         <div className="italic text-2xl text-slate-400 font-normal">
           {subtitle}
         </div>
-        {tags && (
-          <div className="pl-4 flex-1 flex flex-row gap-2 ">
-            {tags.map((tag) => (
-              <div className="py-1 px-3 rounded-full text-md text-white bg-slate-400">
-                {tag}
-              </div>
-            ))}
-          </div>
-        )}
-        <div className="pl-2 italic text-lg text-slate-500 font-light">
+        <div className="pl-4 flex-1 flex flex-row gap-2 ">
+          {tags && (
+            <>
+              {tags.map((tag) => (
+                <div
+                  key={tag}
+                  className="py-1 px-3 rounded-full text-md text-white bg-slate-400"
+                >
+                  {tag}
+                </div>
+              ))}
+            </>
+          )}
+        </div>
+        <div className="pl-2 italic text-lg text-right text-slate-500 font-light">
           {details}
         </div>
       </div>
