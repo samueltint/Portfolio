@@ -29,8 +29,8 @@ function App() {
         <div className="flex flex-row justify-end md:justify-start md:flex-col gap-4 md:order-2">
           <div
             className={
-              "absolute top-5 right-5 text-md px-4 py-2 bg-white rounded-md shadow-sm transition-all " +
-              (emailMessageVisible ? "opacity-100" : "opacity-0")
+              "absolute top-5 left-5 sm:right-5 text-md px-4 py-2 bg-white rounded-md shadow-sm transition-all " +
+              (emailMessageVisible ? "opacity-100" : "hidden opacity-0")
             }
           >
             Email Copied
