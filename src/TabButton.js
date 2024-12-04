@@ -5,7 +5,7 @@ import { Fragment } from "react";
 export default function TabButton({ children }) {
   return (
     <Tab
-      className=" px-4 py-2 rounded-full mx-1 font-redhat font-semibold text-slate-500"
+      className=" px-2 sm:px-4 py-1 sm:py-2 rounded-full mx-1 font-redhat font-semibold text-slate-500"
       as={Fragment}
     >
       {({ selected }) => (

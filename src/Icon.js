@@ -6,7 +6,7 @@ export default function Icon({ className, link, children }) {
       href={link}
       target="_blank"
       rel="noreferrer"
-      className={" fill-slate-600 hover:fill-slate-500"}
+      className="fill-slate-600 hover:fill-slate-500"
     >
       <div className={className}>{children}</div>
     </a>

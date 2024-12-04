@@ -3,7 +3,6 @@ const experienceEntries = [
     title: "Project Management Website with AI Integration",
     subtitle: "Chaos 1",
     description: "Designed and develop a web-based problem-solving platform.",
-    details: "Dec 2023 - Aug 2024",
     tags: [
       "React",
       "Google Cloud Platform",
@@ -17,8 +16,8 @@ const experienceEntries = [
     subtitle: "NSW Police",
     description:
       "Developed a React Native app for NSW police officers to record and store RBT/RDT data digitally.",
-    tags: ["React Native", "Docker"],
-  },
+    tags: ["React Native", "Docker", "Figma"],
+  }
 ];
 
 const projectEntries = [
@@ -40,7 +39,6 @@ const educationEntries = [
   {
     title: "Bachelors of Engineering (Software)",
     subtitle: "University of Technology Sydney",
-    details: "2022-2026",
-  },
+  }
 ];
 export { experienceEntries, projectEntries, educationEntries };
