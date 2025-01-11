@@ -4,7 +4,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:  {
-        playfair: ["Playfair Display"],
         redhat: ["Red Hat Display"]
       }
     },

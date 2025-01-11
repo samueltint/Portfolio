@@ -1,10 +1,15 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 function EntryCard({ title, subtitle, tags, clickable, children }) {
   return (
-    <div className={"bg-white p-4 shadow-md rounded-2xl transition-all" + (clickable && " hover:bg-gray-50 hover:mx-[-2px]")}>
+    <div
+      className={
+        "bg-white p-4 shadow-md rounded-2xl transition-all" +
+        (clickable && " hover:bg-gray-50 hover:mx-[-2px]")
+      }
+    >
       <div className="flex flex-col sm:flex-row items-start sm:items-center p-1 ">
-        <div className="font-redhat text-xl sm:text-2xl leading-8 text-slate-700">
+        <div className=" text-xl sm:text-2xl leading-8 text-slate-700">
           {title}
           {subtitle && (
             <span className="py-2 whitespace-nowrap sm:py-0 italic text-xl sm:text-2xl text-slate-600 font-normal inline">
@@ -12,7 +17,7 @@ function EntryCard({ title, subtitle, tags, clickable, children }) {
             </span>
           )}
         </div>
-        <div className="hidden sm:flex pl-4 flex-1 flex-wrap gap-2 ">
+        <div className="sm:flex pl-4 flex-1 flex-wrap gap-2 ">
           {tags && (
             <>
               {tags.map((tag) => (
@@ -34,15 +39,21 @@ function EntryCard({ title, subtitle, tags, clickable, children }) {
   );
 }
 
-export default function Entry({ title, subtitle, tags, children, link }) {
+export default function Entry({ title, subtitle, tags, children, link, page }) {
   return (
     <>
       {link ? (
         <a href={link} target="_blank" rel="noreferrer">
-          <EntryCard title={title} subtitle={subtitle} tags={tags} clickable> 
+          <EntryCard title={title} subtitle={subtitle} tags={tags} clickable>
             {children}
           </EntryCard>
         </a>
+      ) : page ? (
+        <Link to={page}>
+          <EntryCard title={title} subtitle={subtitle} tags={tags} clickable>
+            {children}
+          </EntryCard>
+        </Link>
       ) : (
         <div>
           <EntryCard title={title} subtitle={subtitle} tags={tags}>

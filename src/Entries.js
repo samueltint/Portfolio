@@ -2,8 +2,9 @@ const experienceEntries = [
   {
     title: "Project Management Website with AI Integration",
     subtitle: "Chaos 1",
-    description: "Designed and develop a web-based problem-solving platform.",
+    description: "Design and development of a web-based problem-solving platform for use in the Defence industry.",
     tags: ["TypeScript", "React", "Google Cloud Platform", "Docker"],
+    page: "/project/chaos-1"
   },
   {
     title: "RBT/RDT Mobile App",
