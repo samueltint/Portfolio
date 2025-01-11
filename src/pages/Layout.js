@@ -18,10 +18,10 @@ function Layout() {
   return (
     <div className="font-redhat relative bg-slate-200 min-h-screen p-4 sm:p-10 w-full flex flex-col">
       <div className="flex flex-col md:flex-row w-full justify-between md:px-12">
-        <div className="flex flex-row justify-end md:justify-start md:flex-col gap-4 md:order-2">
+        <div className="flex flex-row items-center justify-end md:justify-start md:flex-col gap-4 md:order-2">
           <div
             className={
-              "absolute top-5 left-5 sm:right-5 text-md px-4 py-2 w-fit bg-white rounded-md shadow-sm transition-all " +
+              "absolute top-5 left-5 sm:right-5 text-md px-4 py-2 w-fit bg-white rounded-md shadow-sm  transition-all " +
               (emailMessageVisible ? "opacity-100" : "hidden opacity-0")
             }
           >
@@ -45,14 +45,14 @@ function Layout() {
             <LinkedInIcon />
           </Icon>
         </div>
-        <div className="bg-white items-center justify-center flex md:w-fit rounded-2xl shadow-xl m-5 md:order-1">
+        <div className="bg-white items-center justify-center flex md:w-fit rounded-2xl shadow-xl my-5 sm:mx-5 md:order-1">
           <img
             src={profile}
             className="hidden md:block h-48 shadow-lg my-[-200px] ml-[-40px] rounded-full overflow-hidden "
             alt="Profile"
           />
           <div className="flex flex-col items-center p-5 gap-2">
-            <div className="px-3  font-light text-4xl sm:text-6xl">
+            <div className="px-3 text-nowrap font-light text-4xl sm:text-6xl">
               Samuel Tint
             </div>
             <hr className="w-full border-black"></hr>
@@ -62,7 +62,7 @@ function Layout() {
           </div>
         </div>
       </div>
-      <div className="p-5 pt-10">
+      <div className="sm:p-5 sm:pt-10">
         <Outlet />
       </div>
     </div>

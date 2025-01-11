@@ -8,7 +8,7 @@ function EntryCard({ title, subtitle, tags, clickable, children }) {
         (clickable && " hover:bg-gray-50 hover:mx-[-2px]")
       }
     >
-      <div className="flex flex-col sm:flex-row items-start sm:items-center p-1 ">
+      <div className="flex flex-col items-start p-1 gap-2">
         <div className=" text-xl sm:text-2xl leading-8 text-slate-700">
           {title}
           {subtitle && (
@@ -17,13 +17,13 @@ function EntryCard({ title, subtitle, tags, clickable, children }) {
             </span>
           )}
         </div>
-        <div className="sm:flex pl-4 flex-1 flex-wrap gap-2 ">
+        <div className="flex flex-wrap flex-1 gap-2 ">
           {tags && (
             <>
               {tags.map((tag) => (
                 <div
                   key={tag}
-                  className="whitespace-nowrap py-1 px-3 rounded-full text-xs sm:text-md text-white bg-slate-400"
+                  className="whitespace-nowrap py-1 px-3 w-fit rounded-full text-xs sm:text-md text-white bg-slate-400"
                 >
                   {tag}
                 </div>
