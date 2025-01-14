@@ -3,7 +3,7 @@ import { EmailIcon, GithubIcon, LinkedInIcon } from "../assets/Icons.js";
 import Icon from "../components/Icon.js";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Mail } from "lucide-react";
+import { Home, Mail } from "lucide-react";
 
 function Layout() {
   const [emailMessageVisible, setEmailMessageVisible] = useState(false);
@@ -27,6 +27,9 @@ function Layout() {
           >
             Email Copied
           </div>
+          <Icon className="w-10" link="/">
+            <Home className="h-full w-full stroke-slate-600 hover:stroke-slate-500" />
+          </Icon>
           <div
             className="w-10 h-10 my-[-4px] "
             onClick={() => {
@@ -35,12 +38,12 @@ function Layout() {
           >
             <Mail className="h-full w-full stroke-slate-600 hover:stroke-slate-500" />
           </div>
-          <Icon className="w-10" link="https://github.com/samueltint">
+          <Icon className="w-10" href="https://github.com/samueltint">
             <GithubIcon />
           </Icon>
           <Icon
             className="w-10"
-            link="https://www.linkedin.com/in/samuel-tint/"
+            href="https://www.linkedin.com/in/samuel-tint/"
           >
             <LinkedInIcon />
           </Icon>

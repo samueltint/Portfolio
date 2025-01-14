@@ -2,8 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
-import ProjectLayout from "./pages/project/ProjectLayout";
-import Chaos1 from "./pages/project/Chaos1";
+import Project from "./pages/Project";
 
 export default function App() {
   return (
@@ -11,9 +10,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="project" element={<ProjectLayout />}>
-            <Route path="chaos-1" element={<Chaos1 />} />
-          </Route>
+          <Route path="Chaos1" element={<Project entryId="chaos1" />}/>
+          <Route path="NSWPolice" element={<Project entryId="police" />}/>
           <Route path="*" element={<Navigate to="/" />} />{" "}
         </Route>
       </Routes>
