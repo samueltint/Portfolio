@@ -97,9 +97,10 @@ const entries = [
         <p className="pl-2 pb-6 text-md sm:text-xl whitespace-pre-wrap">
           This project was completed as part of the UTS Software Development
           Studio, where teams of students were able to complete a project for a
-          real world client. Throughout the project we were tasked with
-          acting as consultants for our clients to elucidate their needs, and regularly provide samples
-          and reports to ensure the product matched their intended vision.
+          real world client. Throughout the project we were tasked with acting
+          as consultants for our clients to elucidate their needs, and regularly
+          provide samples and reports to ensure the product matched their
+          intended vision.
         </p>
       </>
     ),
@@ -119,6 +120,15 @@ const entries = [
     ],
   },
   {
+    title: "Slime Mould Simulation",
+    type: "project",
+
+    description:
+      "A simulation of a slime mould (Physarum polycephalum) to explore organic simulations.",
+    tags: ["Processing", "Java"],
+    link: "https://github.com/samueltint/Slime-Mould-Sim",
+  },
+  {
     title: "Early Learning Tools",
     type: "project",
 
@@ -132,7 +142,7 @@ const entries = [
     type: "project",
 
     description:
-      "A series of experiments and micro-projects in the Processing language",
+      "A series of experiments in the Processing language",
     tags: ["Processing", "Java"],
     link: "https://github.com/samueltint/processing-projects",
   },

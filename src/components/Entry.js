@@ -1,13 +1,24 @@
+import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
-function EntryCard({ title, subtitle, tags, clickable, children }) {
+function EntryCard({
+  title,
+  subtitle,
+  tags,
+  clickable,
+  showExternal,
+  children,
+}) {
   return (
     <div
       className={
-        "bg-white p-4 shadow-md rounded-2xl transition-all" +
+        "relative bg-white p-4 shadow-md rounded-2xl transition-all" +
         (clickable && " hover:bg-gray-50 hover:mx-[-2px]")
       }
     >
+      {showExternal && (
+        <ExternalLink className="absolute top-2 right-2 h-12 w-12 aspect-square p-2 stroke-slate-500 transition-all" />
+      )}
       <div className="flex flex-col items-start p-1 gap-2">
         <div className=" text-xl sm:text-2xl leading-8 text-slate-700">
           {title}
@@ -44,7 +55,13 @@ export default function Entry({ title, subtitle, tags, children, link, page }) {
     <>
       {link ? (
         <a href={link} target="_blank" rel="noreferrer">
-          <EntryCard title={title} subtitle={subtitle} tags={tags} clickable>
+          <EntryCard
+            title={title}
+            subtitle={subtitle}
+            tags={tags}
+            clickable
+            showExternal
+          >
             {children}
           </EntryCard>
         </a>
