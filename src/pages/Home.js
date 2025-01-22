@@ -17,11 +17,11 @@ function Home() {
           {entries
             .filter((entry) => entry.type === "experience")
             .map(
-              ({ title, subtitle, tags, details, link, description, page }) => (
+              ({ title, subtitle, limitedTags, details, link, description, page }) => (
                 <Entry
                   title={title}
                   subtitle={subtitle}
-                  tags={tags}
+                  tags={limitedTags}
                   details={details}
                   link={link}
                   page={page}
@@ -35,11 +35,11 @@ function Home() {
           {entries
             .filter((entry) => entry.type === "project")
             .map(
-              ({ title, subtitle, tags, details, link, description, page }) => (
+              ({ title, subtitle, limitedTags, details, link, description, page }) => (
                 <Entry
                   title={title}
                   subtitle={subtitle}
-                  tags={tags}
+                  tags={limitedTags}
                   details={details}
                   link={link}
                   page={page}
@@ -53,11 +53,11 @@ function Home() {
           {entries
             .filter((entry) => entry.type === "education")
             .map(
-              ({ title, subtitle, tags, details, link, description, page }) => (
+              ({ title, subtitle, limitedTags, details, link, description, page }) => (
                 <Entry
                   title={title}
                   subtitle={subtitle}
-                  tags={tags}
+                  tags={limitedTags}
                   details={details}
                   link={link}
                   page={page}

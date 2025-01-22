@@ -27,7 +27,7 @@ const entries = [
       "Docker",
       "PostgreSQL",
       "Figma",
-      "Scrum Management",
+      "Scrum",
       "Client Consultation",
       "Team Leadership",
     ],
@@ -44,6 +44,7 @@ const entries = [
     ],
     body: (
       <>
+        <h2 className="italic text-slate-500 text-xl">Dec 2023 - Aug 2024</h2>
         <p className="pl-2 text-md sm:text-xl whitespace-pre-wrap ">
           Chaos 1 are a defence innovation company focused on integrating
           technology with military planning processes. The company had developed
@@ -85,7 +86,7 @@ const entries = [
       "Docker",
       "Figma",
       "UI/UX",
-      "Scrum Management",
+      "Scrum",
       "Client Consultation",
     ],
     body: (
@@ -132,7 +133,7 @@ const entries = [
 
     description:
       "A simulation of a slime mold (Physarum Polycephalum) to explore organic simulations.",
-    tags: ["Processing", "Java"],
+    limitedTags: ["Processing", "Java"],
     link: "https://github.com/samueltint/Slime-Mould-Sim",
   },
   {
@@ -141,7 +142,7 @@ const entries = [
 
     description:
       "Development of simple learning tools and games for use in a NSW based Disability Support clinic.",
-    tags: ["JavaScript", "React", "TailwindCSS"],
+    limitedTags: ["JavaScript", "React", "TailwindCSS"],
     link: "https://github.com/samueltint/learning-tools",
   },
   {
@@ -149,14 +150,14 @@ const entries = [
     type: "project",
 
     description: "A series of experiments in the Processing language",
-    tags: ["Processing", "Java"],
+    limitedTags: ["Processing", "Java"],
     link: "https://github.com/samueltint/processing-projects",
   },
   {
     title: "Bachelors of Engineering (Software)",
     type: "education",
 
-    subtitle: "UTS",
+    subtitle: "University of Technology Sydney",
     description: "\u2022 4th year student\n\u2022 Expected graduation in 2026",
   },
 ];
