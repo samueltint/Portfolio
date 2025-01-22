@@ -9,7 +9,7 @@ export default function TabButton({ children }) {
     >
       {({ selected }) => (
         <button
-          className={` transition-all duration-200 ${
+          className={` transition-all duration-200 ring-0 ${
             selected
               ? "bg-white"
               : "bg-slate-400 text-white hover:bg-slate-300/50"

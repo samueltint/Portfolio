@@ -12,13 +12,20 @@ const entries = [
     subtitle: "Chaos 1",
     description:
       "Design and development of a web-based problem-solving platform for use in the Defence industry.",
-    limitedTags: ["TypeScript", "React", "Google Cloud Platform", "Docker"],
+    limitedTags: [
+      "TypeScript",
+      "React",
+      "Google Cloud Platform",
+      "PostgreSQL",
+      "Docker",
+    ],
     fullTags: [
       "TypeScript",
       "React",
       "Tailwind",
       "Google Cloud Platform",
       "Docker",
+      "PostgreSQL",
       "Figma",
       "Scrum Management",
       "Client Consultation",
@@ -120,11 +127,11 @@ const entries = [
     ],
   },
   {
-    title: "Slime Mould Simulation",
+    title: "Slime Mold Simulation",
     type: "project",
 
     description:
-      "A simulation of a slime mould (Physarum polycephalum) to explore organic simulations.",
+      "A simulation of a slime mold (Physarum Polycephalum) to explore organic simulations.",
     tags: ["Processing", "Java"],
     link: "https://github.com/samueltint/Slime-Mould-Sim",
   },
@@ -141,8 +148,7 @@ const entries = [
     title: "Processing Projects",
     type: "project",
 
-    description:
-      "A series of experiments in the Processing language",
+    description: "A series of experiments in the Processing language",
     tags: ["Processing", "Java"],
     link: "https://github.com/samueltint/processing-projects",
   },
