@@ -15,7 +15,7 @@ function ProjectLayout({ entryId }) {
       </Link>
       {entry && (
         <div className="flex flex-col lg:flex-row">
-          <div className="flex flex-col gap-2 p-4">
+          <div className="flex flex-col p-4">
             <h1 className="text-3xl md:text-4xl xl:text-5xl xl:leading-normal text-slate-700 ">
               {entry.title}
               <span className="py-2 whitespace-nowrap sm:py-0 italic text-2xl md:text-4xl xl:text-5xl text-slate-600 font-light inline">
